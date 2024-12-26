@@ -1,0 +1,233 @@
+body {
+    font-family: "Lucida Sans";
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+header {
+    display: inline;
+    width: fit-content;
+}
+  
+.judul {
+    height: 200px;
+    font-size: 27px;
+    background: linear-gradient(to bottom, #00b7ff, #74d7ff);
+    text-align: center;
+    color: white;
+}
+
+.judul h1 {
+    margin-top: 0;
+}
+
+.logo {
+    height: 80px;
+    padding-top: 15px;
+    margin-bottom: 10px; 
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #74d7ff;
+    padding: 5px;
+}
+
+nav li {
+    display: inline;
+    list-style-type: none;
+    margin-right: 25px;
+}
+  
+nav a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 5px;
+    overflow: hidden; 
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff; 
+    transition: width 0.3s ease; 
+}
+
+nav a:hover {
+    color: #ffffff; 
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.container {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.container h2 {
+    font-size: 35px;
+    margin-top: 0;
+}
+
+.film-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    border-bottom: 1.5px solid rgb(129, 153, 158); 
+    padding-bottom: 20px; 
+    margin-bottom: 20px; 
+}
+
+.featured-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.poster-film {
+    width: 200px;
+    height: auto; 
+}
+
+.film-details {
+    display: flex;
+    flex-direction: column; 
+}
+
+.film-details h3 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.film-details p {
+    margin-top: 10px;
+}
+
+.film-actions {
+    display: flex;
+    gap: 20px; 
+    margin-top: 10px; 
+}
+
+.film-actions a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white; 
+}
+
+.film-actions i {
+    font-size: 18px;
+}
+
+.film-actions .trailer {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    height: 2px;
+    border-radius: 35px;
+    background-color: #00b7ff; 
+    padding: 20px; 
+    text-decoration: none;
+}
+
+.film-actions .bookmark,
+.film-actions .share {
+    border-radius: 50%; 
+    width: 40px; 
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #00b7ff;
+    color: #00b7ff;
+    padding: 0;
+}
+
+.film-actions .trailer:hover {
+    background-color: #74d7ff;
+}
+
+.film-actions .bookmark:hover,
+.film-actions .share:hover {
+    color: #74d7ff;
+}
+
+.wisata h3 {
+    font-size: 25px;
+}
+
+main {
+    display: flex;
+    gap: 20px; 
+}
+
+#content {
+    width: 75%;
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+
+aside {
+    width: 25%;
+    height: fit-content;
+    padding: 0 20px 20px 20px;
+    margin-top: 20px;
+    margin-right: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: #ffffff; 
+
+}
+
+aside img {
+    height: 80px;
+    width: auto;
+    margin: 0 auto;
+}
+
+aside header, 
+aside section h3 {
+    text-align: center;
+}
+
+footer {
+    margin: 0;
+    padding: 10px;
+    color: rgb(55, 71, 77);
+    background-color: #74d7ff;
+    text-align: center;
+}
+  
+@media screen and (max-width: 1000px) {
+    main {
+        flex-direction: column;
+    }
+
+    #content,
+    aside {
+      width: 100%;
+      padding: 0;
+    }
+
+    aside {
+        margin: 10px 20px 20px 10px;
+    }
+}
+  
